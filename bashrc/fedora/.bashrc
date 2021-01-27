@@ -38,11 +38,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 
-# set vim to default editor if it isn't already
-[ -z "$EDITOR" ] && EDITOR=vim
-
 # exports
 export VISUAL=vim
+export EDITOR=vim
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 ### archive extractor
@@ -80,3 +78,6 @@ shopt -s histappend
 
 # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
