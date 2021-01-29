@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias update='sudo dnf distro-sync && sudo dnf check-update && sudo dnf upgrade --refresh && sudo dnf autoremove'
 alias install='sudo dnf install'

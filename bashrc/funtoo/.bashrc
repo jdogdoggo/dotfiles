@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias merge='doas emerge -auDN @world'
 alias install='doas emerge'

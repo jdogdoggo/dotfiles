@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias install='sudo apt install'

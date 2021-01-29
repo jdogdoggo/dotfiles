@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias update='urpmi.update -a' 
 alias install='sudo urpmi'

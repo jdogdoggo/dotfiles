@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias update='sudo zypper ref && sudo zypper up'
 alias install='sudo zypper in'

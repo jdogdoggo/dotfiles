@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+set -o vi
+
 # aliases
 alias update='doas pacman -Syyu && doas pacman -Rns $(pacman -Qtdq)'
 alias install='doas pacman -S'
