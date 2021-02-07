@@ -46,10 +46,14 @@ alias or='openbox --replace && exit'
 alias linfo='inxi -Fxxxrza'
 alias mv='mv -i'
 alias rm='rm -i'
-alias cp='cp -i' 
+alias cp='cp -i'
+alias playlist-dl="youtube-dl -cio '%(autonumber)s-%(title)s.%(ext)s'"
+alias yt='youtube-dl'
+alias ytv='yt -f bestvideo'
+alias yta='yt -f bestaudio'
 
 # exports
-export VISUAL=vim
+export VISUAL=vim || export VISUAL=vi
 export EDITOR="$VISUAL"
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
