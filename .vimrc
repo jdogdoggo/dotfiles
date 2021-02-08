@@ -6,11 +6,12 @@ call plug#begin('~/.vim/autoload')
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-css-color'
 call plug#end()
 
+set laststatus=2
 set number relativenumber
 syntax on
 set nobackup       
