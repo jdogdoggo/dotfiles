@@ -53,7 +53,7 @@ alias yt-opus="yt --extract-audio --audio-format opus"
 alias yt-vorbis="yt --extract-audio --audio-format vorbis"
 alias yt-wav="yt --extract-audio --audio-format wav"
 alias yt-best="yt -f bestvideo+bestaudio"
-alias yt='yt'
+alias yt='youtube-dl'
 alias ytv='yt -f bestvideo'
 alias yta='yt -f bestaudio'
 
