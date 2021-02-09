@@ -1,8 +1,5 @@
 # if not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[[ $- != *i* ]] && return
 
 set -o vi
 
