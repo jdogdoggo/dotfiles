@@ -4,9 +4,8 @@
 set -o vi
 
 # aliases
-alias update='sudo dnf distro-sync && sudo dnf check-update && sudo dnf upgrade --refresh && sudo dnf autoremove'
+alias update='sudo dnf check-update && sudo dnf update && sudo dnf autoremove'
 alias install='sudo dnf install'
-alias please='sudo !!'
 alias sync='sudo dnf check-update'
 alias remove='sudo dnf remove'
 alias search='dnf repoquery'
@@ -56,10 +55,10 @@ alias ytv='yt -f bestvideo'
 alias yta='yt -f bestaudio'
 
 # exports
-export VISUAL=vim || export VISUAL=vi
+export VISUAL=vim
 export EDITOR="$VISUAL"
-export TERMINAL="kitty" || export TERMINAL='alacritty' || export TERMINAL='st'
-export BROWSER="brave" || export BROWSER='brave-bin' || export BROWSER='firefox'
+export TERMINAL="kitty"
+export BROWSER="brave-browser"
 
 PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
