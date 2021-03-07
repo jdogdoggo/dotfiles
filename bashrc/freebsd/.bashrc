@@ -73,6 +73,7 @@ ex ()
       *.zip)       unzip "$1"     ;;
       *.Z)         uncompress "$1";;
       *.7z)        7z x "$1"      ;;
+      *.lzma)      lzma -d "$1"   ;;
       *.deb)       ar x "$1"      ;;
       *.tar.xz)    tar xf "$1"    ;;
       *.tar.zst)   unzstd "$1"    ;;      
