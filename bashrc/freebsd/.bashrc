@@ -4,7 +4,7 @@
 set -o vi
 
 # aliases
-alias update='doas pkg update && pkg upgrade && pkg autoremove' 
+alias update='doas pkg update && doas pkg upgrade && doas pkg autoremove' 
 alias install='doas pkg install'
 alias remove='doas pkg delete'
 alias search='doas pkg search'
