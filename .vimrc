@@ -11,10 +11,19 @@ Plug 'ap/vim-css-color'
 call plug#end()
 
 set laststatus=2
-set number relativenumber
+set hidden
+set encoding=utf-8
+set fileencoding=utf-8
+set t_Co=256
+set ruler
+set number
+set smartindent
+set clipboard=unnamedplus
+set formatoptions-=cro
+set autoindent
 syntax on
-set nobackup       
-set nowritebackup  
+set nobackup
+set nowritebackup
 set noswapfile
 set t_u7=
 set bg=dark
