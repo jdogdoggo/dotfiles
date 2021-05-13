@@ -4,10 +4,10 @@
 set -o vi
 
 # aliases
-alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
+alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean'
 alias install='sudo apt install'
 alias sync='sudo apt update'
-alias remove='sudo apt remove'
+alias remove='sudo apt purge'
 alias search='apt-cache search'
 alias reboot='sudo systemctl reboot'
 alias poweroff='sudo systemctl poweroff'
