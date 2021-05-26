@@ -4,7 +4,7 @@
 set -o vi
 
 # aliases
-alias update='sudo dnf check-update && sudo dnf update && sudo dnf autoremove'
+alias update='sudo dnf update && sudo dnf upgrade && sudo dnf autoremove'
 alias install='sudo dnf install'
 alias sync='sudo dnf check-update'
 alias remove='sudo dnf remove'
