@@ -1,0 +1,12 @@
+# package.use# required by x11-libs/pango-1.48.10::gentoo
+# required by dev-qt/qtwidgets-5.15.2-r11::gentoo[gtk]
+# required by app-crypt/pinentry-1.2.0::gentoo[qt5]
+# required by app-crypt/gnupg-2.2.32::gentoo
+# required by app-crypt/gcr-3.40.0::gentoo
+>=media-libs/freetype-2.11.0-r1 harfbuzz
+# required by app-shells/fish-3.3.1-r1::gentoo
+# required by fish (argument)
+>=dev-libs/libpcre2-10.39 pcre32
+# required by www-client/firefox-93.0::gentoo[system-libvpx]
+# required by firefox (argument)
+>=media-libs/libvpx-1.10.0 postproc
