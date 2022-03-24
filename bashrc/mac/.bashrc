@@ -71,6 +71,7 @@ ex ()
       *.7z)        7z x "$1"      ;;
       *.lzma)      lzma -d "$1"   ;;      
       *.deb)       ar x "$1"      ;;
+      *.xz)        unxz "$1"      ;;
       *.tar.xz)    tar xf "$1"    ;;
       *.tar.zst)   unzstd "$1"    ;;      
       *)           echo "'$1' cannot be extracted" ;;
