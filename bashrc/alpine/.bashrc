@@ -5,25 +5,21 @@
 set -o vi
 
 # aliases
-alias update='doas pacman -Syyu && doas pacman -Rns $(pacman -Qtdq)'
-alias install='doas pacman -S'
-alias ls='exa -l --color=always --group-directories-first'
-alias la='exa -al --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
-alias sudo='doas'
-alias doas='doas --'
-alias sync='doas pacman -Syy'
-alias remove='doas pacman -Rns'
-alias search='doas pacman -Ss'
-alias reboot='doas reboot'
-alias poweroff='doas poweroff'
-alias aurbuild='makepkg -si'
+alias update='sudo apk update && sudo apk upgrade && sudo apk cache clean'
+alias install='sudo apk add'
+alias sync='sudo apk update'
+alias remove='sudo apk del'
+alias search='apk search'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+alias ls='ls -lh --color=auto --group-directories-first'
+alias la='ls -lAh --color=auto --group-directories-first'
+alias l.='ls -a | egrep "^\."'
 alias weather='curl wttr.in'
 alias hisgrep='history | grep --color=auto'
 alias df='df -h'
 alias free='free -m'
-alias find='doas find'
+alias find='sudo find'
 alias ..='cd ..'
 alias audio='alsamixer'
 alias ...='cd ../..'
@@ -38,8 +34,8 @@ alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-alias kp='killall pcmanfm' 
-alias or='openbox --replace && exit'
+alias kp='killall pcmanfm'
+alias or='openbox --replace && exit' 
 alias linfo='inxi -Fxxxrza'
 alias mv='mv -iv'
 alias rm='rm -iv'
@@ -84,8 +80,8 @@ ex ()
       *.7z)        7z x "$1"      ;;
       *.lzma)      lzma -d "$1"   ;;
       *.deb)       ar x "$1"      ;;
-      *.xz)        unxz "$1"      ;;
       *.tar.xz)    tar xf "$1"    ;;
+      *.xz)        unxz "$1"      ;;
       *.tar.zst)   unzstd "$1"    ;;      
       *)           echo "'$1' cannot be extracted" ;;
     esac
@@ -93,6 +89,8 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
