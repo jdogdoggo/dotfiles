@@ -5,7 +5,7 @@
 set -o vi
 
 # aliases
-alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean'
+alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean'
 alias install='sudo apt install'
 alias sync='sudo apt update'
 alias remove='sudo apt purge'
