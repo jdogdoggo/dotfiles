@@ -6,9 +6,9 @@ set -o vi
 
 # aliases
 alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean'
-alias install='sudo apt install'
+alias install='sudo apt install -y'
 alias sync='sudo apt update'
-alias remove='sudo apt purge'
+alias remove='sudo apt purge -y'
 alias search='apt-cache search'
 alias reboot='sudo systemctl reboot'
 alias poweroff='sudo systemctl poweroff'
