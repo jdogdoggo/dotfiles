@@ -5,14 +5,14 @@
 set -o vi
 
 # aliases
-alias update='pacman -Syyu && pacman -Rns $(pacman -Qtdq)'
-alias install='pacman -S'
+alias update='pacman -Syyu --noconfirm && pacman -Rns $(pacman -Qtdq) --noconfirm'
+alias install='pacman -S --noconfirm'
 alias ls='exa -l --color=always --group-directories-first'
 alias la='exa -al --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 alias sync='pacman -Syy'
-alias remove='pacman -Rns'
+alias remove='pacman -Rns --noconfirm'
 alias search='pacman -Ss'
 alias aurbuild='makepkg -si'
 alias weather='curl wttr.in'

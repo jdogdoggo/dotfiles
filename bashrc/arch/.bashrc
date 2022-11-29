@@ -5,8 +5,8 @@
 set -o vi
 
 # aliases
-alias update='doas pacman -Syyu && doas pacman -Rns $(pacman -Qtdq)'
-alias install='doas pacman -S'
+alias update='doas pacman -Syyu --noconfirm && doas pacman -Rns $(pacman -Qtdq) --noconfirm'
+alias install='doas pacman -S --noconfirm'
 alias ls='exa -l --color=always --group-directories-first'
 alias la='exa -al --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
@@ -14,7 +14,7 @@ alias l.='exa -a | egrep "^\."'
 alias sudo='doas'
 alias doas='doas --'
 alias sync='doas pacman -Syy'
-alias remove='doas pacman -Rns'
+alias remove='doas pacman -Rns --noconfirm'
 alias search='doas pacman -Ss'
 alias reboot='doas reboot'
 alias poweroff='doas poweroff'
