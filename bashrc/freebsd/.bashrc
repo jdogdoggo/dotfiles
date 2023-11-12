@@ -6,8 +6,8 @@ set -o vi
 
 # aliases
 alias update='doas pkg update && doas pkg upgrade && doas pkg autoremove' 
-alias install='doas pkg install'
-alias remove='doas pkg delete'
+alias install='doas pkg install -y'
+alias remove='doas pkg delete -y'
 alias search='doas pkg search'
 alias descsearch='pkg search -D'
 alias reboot='doas reboot'
