@@ -5,17 +5,16 @@
 set -o vi
 
 # aliases
-alias update='sudo dnf update && sudo dnf upgrade && sudo dnf autoremove'
-alias install='sudo dnf install'
+alias update='sudo dnf update -y && sudo dnf upgrade -y && sudo dnf autoremove -y'
+alias install='sudo dnf install -y'
 alias sync='sudo dnf check-update'
-alias remove='sudo dnf remove'
+alias remove='sudo dnf remove -y'
 alias search='dnf repoquery'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
-alias ls='exa -l --color=always --group-directories-first'
-alias la='exa -al --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+alias ls='ls -lh --color=auto --group-directories-first'
+alias la='ls -lAh --color=auto --group-directories-first'
+alias l.='ls -a | egrep "^\."'
 alias weather='curl wttr.in'
 alias hisgrep='history | grep --color=auto'
 alias df='df -h'
@@ -58,8 +57,6 @@ alias yta='yt -f bestaudio'
 # exports
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export TERMINAL="kitty"
-export BROWSER="firefox"
 
 PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
