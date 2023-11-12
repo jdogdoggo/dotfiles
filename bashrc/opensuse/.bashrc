@@ -5,10 +5,10 @@
 set -o vi
 
 # aliases
-alias update='sudo zypper ref && sudo zypper up'
-alias install='sudo zypper in'
+alias update='sudo zypper ref && sudo zypper up -y'
+alias install='sudo zypper in -y'
 alias sync='sudo zypper ref'
-alias remove='sudo zypper rm'
+alias remove='sudo zypper rm -y'
 alias search='sudo zypper se'
 alias info='zypper if'
 alias wp='zypper wp'
