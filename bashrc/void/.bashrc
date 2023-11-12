@@ -5,14 +5,14 @@
 set -o vi
 
 # aliases
-alias update='sudo xbps-install -S && sudo xbps-install -u && sudo xbps-remove -o'
-alias install='sudo xbps-install -u'
+alias update='sudo xbps-install -S && sudo xbps-install --yes -u && sudo xbps-remove --yes -o'
+alias install='sudo xbps-install --yes -u'
 alias ls='exa -l --color=always --group-directories-first'
 alias la='exa -al --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 alias sync='sudo xbps-install -S'
-alias remove='sudo xbps-remove'
+alias remove='sudo xbps-remove --yes'
 alias search='sudo xbps-query -Rs'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
