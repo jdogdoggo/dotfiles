@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-set -o vi
+bindkey -v
 
 # aliases
 alias update='brew update && brew upgrade && brew autoremove && brew cleanup'
@@ -51,12 +51,11 @@ alias yta='yt -f bestaudio'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+PS1="%{$(tput bold)%}%{$(tput setaf 1)%}[%{$(tput setaf 3)%}%n%{$(tput setaf 2)%}@%{$(tput setaf 4)%}%m %{$(tput setaf 5)%}%~%{$(tput setaf 1)%}]%{$(tput setaf 7)%}\$ %{$(tput sgr0)%}"
 
 # archive extractor, usage: ex <file>
-ex ()
-{
-  if [ -f "$1" ] ; then
+ex () {
+  if [ -f "$1" ]; then
     case $1 in
       *.tar.bz2)   tar xjf "$1"   ;;
       *.tar.gz)    tar xzf "$1"   ;;
@@ -82,13 +81,13 @@ ex ()
 }
 
 # don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-shopt -s histappend
+setopt APPEND_HISTORY
 
 # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+setopt CHECK_WINSIZE
 
 # ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
