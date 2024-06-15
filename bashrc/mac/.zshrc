@@ -83,11 +83,6 @@ ex () {
 # don't put duplicate lines or lines starting with space in the history.
 export HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-setopt APPEND_HISTORY
-
-# check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
-setopt CHECK_WINSIZE
-
 # ignore upper and lowercase when TAB completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
